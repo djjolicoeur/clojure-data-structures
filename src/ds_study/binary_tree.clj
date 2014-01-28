@@ -84,7 +84,7 @@
   (let [r0 (root tree)
         r  (right tree)]
     (cond (nil? tree) nil
-          (nil? (right r)) (root r)
+          (nil? r) r0
           0 (find-max r))))
 
 
@@ -106,4 +106,4 @@
                      (list r0 l new-r)))
      (and (not (nil? r))
           (not (nil? l))) (list min l (tree-remove min r))
-     0 (if (nil? l) r l))))
+          0 (if (nil? l) r l))))
