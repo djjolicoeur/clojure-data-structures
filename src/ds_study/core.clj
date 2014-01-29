@@ -1,6 +1,3 @@
-(ns ds-study.core)
-
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(ns ds-study.core
+  (:require [ds-study.binary-tree :refer :all]
+            [ds-study.avl-tree :refer :all]))
