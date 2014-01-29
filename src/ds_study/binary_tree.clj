@@ -87,6 +87,15 @@
           (nil? r) r0
           0 (find-max r))))
 
+(defn height
+  "Calculate height of tree"
+  ([tree count]
+     (if (nil? tree) count
+         (Math/max (height (left tree) (inc count))
+                   (height (right tree) (inc count)))))
+  ([tree]
+     (height tree 0)))
+
 
 (defn tree-remove
   "Remove node from tree given node and tree"
